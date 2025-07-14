@@ -22,12 +22,32 @@
       <button id="runBtn">Run ▶</button>
     </div>
 
+    <div class="tabs">
+      <button class="tab active" data-tab="html">HTML</button>
+      <button class="tab" data-tab="js">JS</button>
+      <button class="tab" data-tab="css">CSS</button>
+    </div>
+
     <div class="container" id="container">
-      <textarea id="editor">
-// Tulis kode JS di sini
-const name = "John";
-name + " Doe";</textarea
-      >
+      <textarea id="editor-html" class="editor-area"><h2>Halo Playground!</h2>
+      <p id="demo">Teks ini akan diubah oleh JavaScript.</p></textarea>
+      <textarea id="editor-js" class="editor-area" style="display:none;">
+      document.getElementById('demo').textContent = 'Teks ini diubah oleh JS!';
+</textarea>
+      <textarea id="editor-css" class="editor-area" style="display:none;">
+      body {
+        background: #222;
+        color: #fff;
+        font-family: sans-serif;
+      }
+      h2 {
+        color: #4ec9b0;
+      }
+      #demo {
+        color: #dcdcaa;
+        font-weight: bold;
+      }
+      </textarea>
       <div class="resizer" id="resizer"></div>
       <div id="output"></div>
     </div>
@@ -35,6 +55,9 @@ name + " Doe";</textarea
     <!-- CodeMirror -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
