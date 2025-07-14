@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: "Fira Code", "Courier New", monospace;
+    display: flex;
+    flex-direction: column;
+    background: #1e1e1e;
+    color: #ccc;
+}
+
+.header {
+    background: #252526;
+    color: #eee;
+    padding: 10px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.header button {
+    background: #007acc;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#editor {
+    width: 50%;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+#output {
+    flex: 1;
+    background: #1e1e1e;
+    padding: 12px;
+    overflow-y: auto;
+    color: #dcdcaa;
+    border-left: 1px solid #333;
+    font-family: "Fira Code", monospace;
+    font-size: 14px;
+    white-space: pre-wrap;
+}
+
+.CodeMirror {
+    height: 100%;
+    font-size: 14px;
+    background: #1e1e1e;
+    color: #d4d4d4;
+}
+
+.resizer {
+    width: 6px;
+    cursor: col-resize;
+    background-color: #444;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    #editor,
+    #output {
+        width: 100% !important;
+        height: 50%;
+    }
+
+    .resizer {
+        height: 6px;
+        width: 100%;
+        cursor: row-resize;
+    }
+}

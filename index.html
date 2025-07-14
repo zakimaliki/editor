@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JS Playground - Resizable</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CodeMirror CSS & Theme -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/material.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>⚡ JS Playground</h1>
+      <button id="runBtn">Run ▶</button>
+    </div>
+
+    <div class="container" id="container">
+      <textarea id="editor">
+// Tulis kode JS di sini
+const name = "John";
+name + " Doe";</textarea
+      >
+      <div class="resizer" id="resizer"></div>
+      <div id="output"></div>
+    </div>
+
+    <!-- CodeMirror -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
