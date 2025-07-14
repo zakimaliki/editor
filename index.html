@@ -18,7 +18,7 @@
   </head>
   <body>
     <div class="header">
-      <h1>⚡ JS Playground</h1>
+      <h1>⚡ Zero Editor</h1>
       <button id="runBtn">Run ▶</button>
     </div>
 
@@ -29,24 +29,26 @@
     </div>
 
     <div class="container" id="container">
-      <textarea id="editor-html" class="editor-area"><h2>Halo Playground!</h2>
-      <p id="demo">Teks ini akan diubah oleh JavaScript.</p></textarea>
+    <textarea id="editor-html" class="editor-area">
+<h2>Halo Playground!</h2>
+<p id="demo">Teks ini akan diubah oleh JavaScript.</p>
+    </textarea>
       <textarea id="editor-js" class="editor-area" style="display:none;">
-      document.getElementById('demo').textContent = 'Teks ini diubah oleh JS!';
-</textarea>
+document.getElementById('demo').textContent = 'Teks ini diubah oleh JS!';
+      </textarea>
       <textarea id="editor-css" class="editor-area" style="display:none;">
-      body {
-        background: #222;
-        color: #fff;
-        font-family: sans-serif;
-      }
-      h2 {
-        color: #4ec9b0;
-      }
-      #demo {
-        color: #dcdcaa;
-        font-weight: bold;
-      }
+body {
+  background: #222;
+  color: #fff;
+  font-family: sans-serif;
+}
+h2 {
+  color: #4ec9b0;
+}
+#demo {
+  color: #dcdcaa;
+  font-weight: bold;
+}
       </textarea>
       <div class="resizer" id="resizer"></div>
       <div id="output"></div>
