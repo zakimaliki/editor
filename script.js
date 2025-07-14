@@ -33,9 +33,18 @@ resizer.addEventListener("mousedown", function (e) {
 });
 
 function resize(e) {
-    const newEditorWidth = e.clientX;
-    editorElement.style.width = newEditorWidth + "px";
-    editor.setSize(newEditorWidth, null); // Resize CodeMirror too
+    // Hitung posisi mouse relatif terhadap container
+    const containerRect = container.getBoundingClientRect();
+    let newEditorWidth = e.clientX - containerRect.left;
+    // Batasi minimum dan maksimum lebar
+    const minWidth = 100;
+    const maxWidth = containerRect.width - 100;
+    newEditorWidth = Math.max(minWidth, Math.min(newEditorWidth, maxWidth));
+    // Atur flex-basis editor agar bisa di-resize
+    editorElement.parentElement.querySelector('.CodeMirror').style.flexBasis = newEditorWidth + 'px';
+    editorElement.style.flexBasis = newEditorWidth + 'px';
+    // Resize CodeMirror
+    editor.setSize(newEditorWidth, null);
 }
 
 function stopResize() {
